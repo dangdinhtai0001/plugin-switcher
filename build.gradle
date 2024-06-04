@@ -37,3 +37,11 @@ tasks.withType(KotlinCompile) {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+            from components.java
+        }
+    }
+}
